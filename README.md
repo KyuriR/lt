@@ -17,5 +17,4 @@ CHANGES TO CODE
 - Fixed the column indexing by correctly incrementing the index in the loop.  
 - Updated the logic so that both the highest mark and the corresponding student number are stored correctly.  
 - Defined and used the correct variable student_num
-- Wrapped the main execution code in:
-if __name__ == "__main__":
+- Put the main execution inside if __name__ == "__main__": to stop it from running when the file is imported for tests.
