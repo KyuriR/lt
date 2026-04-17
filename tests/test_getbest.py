@@ -1,12 +1,12 @@
 import unittest
 from io import StringIO
-import getBest
+import getbest
 
 
 class TestGetBest(unittest.TestCase):
 
     def test_basic(self):
-        fake_file = StringIO{}
+        fake_file = StringIO(
             "Course,Student Number,Mark,Comment\n"
             "ELEN3020,160001,72,OK\n"
             "ELEN3020,167381,90,Check\n"
@@ -22,7 +22,7 @@ class TestGetBest(unittest.TestCase):
         fake_file = StringIO(
             "Mark,Comment,Student Number,Course\n"
             "72,OK,160001,ELEN3020\n"
-            "90,Check,167381,ELEN3020\m"
+            "90,Check,167381,ELEN3020\n"
         )
 
         num_col, mark_col = getbest.getCols(fake_file)
@@ -47,4 +47,4 @@ class TestGetBest(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest..main()
+    unittest.main()
